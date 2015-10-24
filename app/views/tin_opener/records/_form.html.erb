@@ -12,7 +12,13 @@
   <% end %>
 
   <div class="actions">
-    <%= f.file :row_data %>
+    <%= f.fields_for :row_data do |header_fields| %>
+      <% f.object.row_data.try(:each) do |key, value| %>
+        <div>
+          <%= header_fields.text_field key, value: value %>
+        </div>
+      <% end %>
+    <% end %>
     <%= f.submit %>
   </div>
 <% end %>

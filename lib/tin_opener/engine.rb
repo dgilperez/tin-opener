@@ -12,5 +12,10 @@ module TinOpener
       g.javascripts     false
       g.helper          false
     end
+
+    # config.paths.add "lib", eager_load: true
+    # config.paths.add "app", eager_load: true
+    # config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    # config.autoload_paths += Dir["#{config.root}/app/**/"]
   end
 end

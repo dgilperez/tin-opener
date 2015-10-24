@@ -1,4 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @data_set.name %></h1>
+
+<p><b>Estructura</b></p>
+<p>
+  <%= @data_set.headers.keys.join(', ') %>
+</p>
+
 <%= link_to 'Edit', edit_data_set_path(@data_set) %> |
 <%= link_to 'Back', data_sets_path %>

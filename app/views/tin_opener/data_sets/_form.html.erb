@@ -1,4 +1,4 @@
-<%= form_for(@data_set) do |f| %>
+<%= form_for(@data_set, multipart: true) do |f| %>
   <% if @data_set.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@data_set.errors.count, "error") %> prohibited this data_set from being saved:</h2>
@@ -16,7 +16,9 @@
       <%= f.text_field :name %>
     </div>
     <div>
-      <%= f.text_field :headers %>
+      <% if @data_set.new_record? %>
+        <%= f.file_field :data_file %>
+      <% end %>
     </div>
     <%= f.submit %>
   </div>
