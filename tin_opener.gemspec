@@ -9,10 +9,10 @@ Gem::Specification.new do |s|
   s.version     = TinOpener::VERSION
   s.authors     = ["David Gil"]
   s.email       = ["dgilperez@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of TinOpener."
-  s.description = "TODO: Description of TinOpener."
-  s.license     = "MIT"
+  s.homepage    = ""
+  s.summary     = "Opening Data, one Tin at a time"
+  s.description = "A Rails Engine for Ayuntamiento de Madrid's Open Data site"
+  s.license     = "GNU AFFERO GENERAL PUBLIC LICENSE"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

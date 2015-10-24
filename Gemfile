@@ -11,5 +11,4 @@ gemspec
 # your gem to rubygems.org.
 
 # To use a debugger
-# gem 'byebug', group: [:development, :test]
-
+# gem 'pry-byebug', group: [:development, :test], github: 'deivid-rodriguez/pry-byebug', ref: 'e4b57ac7c052ebbb1118365bfaa68b0b5579c3c9'
