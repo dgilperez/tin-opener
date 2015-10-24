@@ -56,7 +56,7 @@ module TinOpener
 
       # Only allow a trusted parameter "white list" through.
       def record_params
-        params[:record]
+        params.require(:record).permit(:row_data)
       end
   end
 end

@@ -56,7 +56,7 @@ module TinOpener
 
       # Only allow a trusted parameter "white list" through.
       def data_set_params
-        params[:data_set]
+        params.require(:data_set).permit(:name, :headers)
       end
   end
 end
