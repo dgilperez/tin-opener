@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount GemName::Engine => "/gem_name"
+  mount TinOpener::Engine => "/tin_opener"
 end
