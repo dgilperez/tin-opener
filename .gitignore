@@ -4,8 +4,12 @@ pkg/
 spec/dummy/log/*
 spec/dummy/tmp/
 spec/dummy/.sass-cache
+/spec/examples.txt
 
 **.orig
 .rspec
 
+# Mac finder artifacts
 .DS_Store
+
+.ruby-gemset
