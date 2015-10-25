@@ -22,7 +22,8 @@ module TinOpener
       if @data_set.save
         redirect_to @data_set, notice: 'Data set was successfully created.'
       else
-        render :new
+        @data_sets = DataSet.all
+        render :index
       end
     end
 

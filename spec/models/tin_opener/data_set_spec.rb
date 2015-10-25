@@ -3,7 +3,7 @@ require 'rails_helper'
 module TinOpener
   RSpec.describe DataSet, type: :model do
     let(:data_file) { File.open(File.join('spec', 'fixtures', 'data_sets', 'bici_disponibilidad.csv'), 'r') }
-    let(:data_set)  { build :tin_opener_data_set }
+    let(:data_set)  { build :data_set }
 
     describe "validations" do
       it { is_expected.to validate_presence_of :name }

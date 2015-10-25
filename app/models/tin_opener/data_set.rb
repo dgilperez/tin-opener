@@ -16,13 +16,14 @@ module TinOpener
     private
 
     def process_data_file
-      return unless data_file.is_a?(File)
+      return unless data_file.is_a?(File) || data_file.is_a?(Tempfile)
 
       data_file_processor = DataFileProcessor.new(file: data_file)
 
       self.headers = data_file_processor.headers
 
       import_records(data_file_processor.rows)
+      # TODO: benchmark and remove this allegedly slower alternative
       # data_file_processor.rows.each do |row|
       #   records.new(row_data: row)
       # end
