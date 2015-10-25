@@ -11,6 +11,7 @@ module TinOpener
 
     # GET /data_sets/1
     def show
+      @records = @data_set.records
     end
 
     # GET /data_sets/new

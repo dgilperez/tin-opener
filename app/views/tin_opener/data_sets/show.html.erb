@@ -1,11 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Edit', edit_data_set_path(@data_set) %> |
+<%= link_to 'Back', data_sets_path %>
+
 <h1><%= @data_set.name %></h1>
 
-<p><b>Estructura</b></p>
+<h2>Estructura</h2>
 <p>
   <%= @data_set.headers.keys.join(', ') %>
 </p>
 
-<%= link_to 'Edit', edit_data_set_path(@data_set) %> |
-<%= link_to 'Back', data_sets_path %>
+<h2>Entradas</h2>
+
+<% if @records.present? %>
+  <%= render @records %>
+<% else %>
+  <p>No hay entradas</p>
+<% end %>

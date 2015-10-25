@@ -12,9 +12,9 @@
   <tbody>
     <% @records.each do |record| %>
       <tr>
-        <td><%= link_to 'Show', record %></td>
-        <td><%= link_to 'Edit', edit_record_path(record) %></td>
-        <td><%= link_to 'Destroy', record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', data_set_record_path(@data_set, record) %></td>
+        <td><%= link_to 'Edit', edit_data_set_record_path(@data_set, record) %></td>
+        <td><%= button_to 'Destroy', data_set_record_path(@data_set, record), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Record', new_record_path %>
+<%= link_to 'New Record', new_data_set_record_path(@data_set) %>

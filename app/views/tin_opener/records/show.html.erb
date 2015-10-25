@@ -1,4 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_record_path(@record) %> |
-<%= link_to 'Back', records_path %>
+<%= link_to 'Edit', edit_data_set_record_path(@data_set, @record) %> |
+<%= link_to 'Back', data_set_records_path(@data_set) %>
+
+<h2>Data set</h2>
+<%= @record.data_set.name %>
+
+<h2>Datos</h2>
+
+<%= render @record %>

@@ -4,7 +4,7 @@ module TinOpener
 
     attr_accessor :data_file, :processed_data_file
 
-    validates :name, presence: true
+    validates :name, presence: true, uniqueness: true
     validates :headers, presence: true
 
     before_validation :process_data_file
@@ -12,17 +12,17 @@ module TinOpener
     private
 
     def process_data_file
-      return @processed_data_file if @processed_data_file
-
       return unless data_file.presence
       file = data_file.tempfile if data_file.respond_to?(:tempfile)
       # return unless file.is_a?(File)
 
-      # data_file_processor = DataFileProcessor.new(file: data_file).to_hash
       data_file_processor = DataFileProcessor.new(file: file)
+
       self.headers = data_file_processor.headers
-      @processed_data_file = data_file_processor.rows
-      # self.records << records
+
+      data_file_processor.rows.each do |row|
+        records.new(row_data: row)
+      end
     end
   end
 end

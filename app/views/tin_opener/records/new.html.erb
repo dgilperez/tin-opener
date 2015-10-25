@@ -1,5 +1,5 @@
-<h1>New Record</h1>
+<h1>New Record for DataSet: <%= @data_set.name %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', records_path %>
+<%= link_to 'Back', data_set_records_path(@data_set) %>

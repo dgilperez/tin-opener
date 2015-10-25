@@ -1,4 +1,4 @@
-<%= form_for(@record) do |f| %>
+<%= form_for([@data_set, @record]) do |f| %>
   <% if @record.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@record.errors.count, "error") %> prohibited this record from being saved:</h2>
@@ -13,9 +13,9 @@
 
   <div class="actions">
     <%= f.fields_for :row_data do |header_fields| %>
-      <% f.object.row_data.try(:each) do |key, value| %>
+      <% @data_set.headers.each do |key, _| %>
         <div>
-          <%= header_fields.text_field key, value: value %>
+          <%= header_fields.text_field key, value: @record.row_data.try{ |h| h[key] } %>
         </div>
       <% end %>
     <% end %>

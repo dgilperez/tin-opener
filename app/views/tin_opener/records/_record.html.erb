@@ -1,0 +1,8 @@
+<h3>Record#<%= record.id %></h3>
+
+<dl>
+  <% record.row_data.each do |key, value| %>
+    <dt><%= key %></dt>
+    <dd><%= value %></dd>
+  <% end %>
+</dl>
