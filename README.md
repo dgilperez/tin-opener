@@ -40,3 +40,25 @@ Support for more data formats:
 * XLS (test different scenarios)
 * XML
 * Custom Data Sources
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
+
+Also, you should read and follow our [Code of Conduct](https://github.com/dgilperez/tin_opener/blob/master/CODE_OF_CONDUCT.md).
+
+## Contributors
+
+To see the generous people who have contributed code, take a look at the [contributors list](http://github.com/dgilperez/tin_opener/contributors).
+
+## Maintainers
+
+* [David Gil](http://github.com/dgilperez)
+
+## License
+
+Copyright (c) 2015 David Gil Pérez, released under the GNU AFFERO GENERAL PUBLIC license
