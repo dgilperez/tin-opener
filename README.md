@@ -36,3 +36,4 @@ Data input format support:
 Support for more data formats:
 
 * Excel
+* XML

@@ -1,21 +1,23 @@
 module TinOpener
+  class UnsupportedDataFileError < StandardError; end
+
   class DataFileProcessor
     def initialize(args = {})
-      @file      = args.fetch(:file)
-      @separator = args.fetch(:separator) { ';' }
+      @file = args.fetch(:file)
     end
 
-    def headers
-      @headers ||= rows.first.try do |row|
-        row.transform_values do |value|
-          value.class.name
-        end
-      end
-    end
+    delegate :headers, :rows, to: :file_type_processor
 
-    def rows
-      @csv_data ||= CSV.parse(@file, col_sep: @separator, headers: true).map do |row|
-          row.to_hash.transform_keys{ |a| a.squeeze.strip.gsub(/\s/, '_').underscore.to_sym }
+    private
+
+    def file_type_processor
+      @file_type_processor ||= case @file
+        when File, Tempfile
+          DataFileProcessors::CsvProcessor.new(file: @file)
+        when String
+          DataFileProcessors::XlsProcessor.new(file: @file)
+        else
+          fail UnsupportedDataFileError
         end
     end
   end
