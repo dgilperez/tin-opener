@@ -26,8 +26,9 @@ ActiveRecord::Schema.define(version: 20151024194928) do
 
   create_table "tin_opener_records", force: :cascade do |t|
     t.hstore   "row_data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "data_set_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "pg"
   s.add_dependency "activerecord-import", '~> 0.10'
 
+  s.add_development_dependency 'pry-byebug'
   s.add_development_dependency 'spring'
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "spring-commands-rspec"
