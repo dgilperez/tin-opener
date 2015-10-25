@@ -1,6 +1,7 @@
 # tin_opener
 [![Build Status](https://travis-ci.org/dgilperez/tin_opener.svg?branch=master)](https://travis-ci.org/dgilperez/tin_opener)
 [![Code Climate](https://codeclimate.com/github/dgilperez/tin_opener/badges/gpa.svg)](https://codeclimate.com/github/dgilperez/tin_opener)
+[![Gem Version](https://badge.fury.io/rb/tin_opener.svg)](https://badge.fury.io/rb/tin_opener)
 
 Opening Data, one Tin at a time.
 
