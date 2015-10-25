@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.2.4"
   s.add_dependency "pg"
+  s.add_dependency "activerecord-import", '~> 0.10'
 
   s.add_dependency 'spring'
   s.add_development_dependency "rspec-rails"

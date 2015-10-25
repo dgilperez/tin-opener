@@ -8,7 +8,7 @@ Rails Engine developed in the context of the Ayuntamiento de Madrid's Open Data 
 
 Add gem to `Gemfile`:
 
-    gem 'tin_opener'
+    gem 'tin_opener', github: 'dgilperez/tin_opener'
 
 Add a mounting point to your `routes.rb`
 

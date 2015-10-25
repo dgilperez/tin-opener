@@ -1,5 +1,5 @@
 TinOpener::Engine.routes.draw do
-  resources :data_sets do
+  resources :data_sets, only: [:index, :show, :create, :edit, :update, :destroy] do
     resources :records
   end
 

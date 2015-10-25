@@ -20,9 +20,18 @@ module TinOpener
 
       self.headers = data_file_processor.headers
 
-      data_file_processor.rows.each do |row|
-        records.new(row_data: row)
-      end
+      import_records(data_file_processor.rows)
+      # data_file_processor.rows.each do |row|
+      #   records.new(row_data: row)
+      # end
+    end
+
+    def import_records(record_attrs)
+      to_import = record_attrs.map do |row|
+          records.new(row_data: row)
+        end
+
+      Record.import to_import
     end
   end
 end

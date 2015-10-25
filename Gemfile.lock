@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     tin_opener (0.0.1)
+      activerecord-import (~> 0.10)
       pg
       rails (~> 4.2.4)
       spring
@@ -38,6 +39,8 @@ GEM
       activemodel (= 4.2.4)
       activesupport (= 4.2.4)
       arel (~> 6.0)
+    activerecord-import (0.10.0)
+      activerecord (>= 3.0)
     activesupport (4.2.4)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
