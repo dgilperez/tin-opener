@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2.4"
   s.add_dependency "pg"
   s.add_dependency "activerecord-import", '~> 0.10'
+  s.add_dependency "roo", "~> 2.1"
+  s.add_dependency "roo-xls", "~> 1.0"
 
   s.add_development_dependency 'pry-byebug'
   s.add_development_dependency 'spring'

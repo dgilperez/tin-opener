@@ -3,15 +3,33 @@ module TinOpener
     class XlsProcessor < TinOpener::DataFileProcessor
       def initialize(args = {})
         super
-        fail NotImplementedError
       end
 
-      def headers
-        fail NotImplementedError
+      delegate :headers, :rows, to: :csv_processor
+
+      private
+
+      def raw_data
+        @raw_data ||= Roo::Spreadsheet.open(@file.path)
       end
 
-      def rows
-        fail NotImplementedError
+      def csv_processor
+        @csv_processor ||= CsvProcessor.new(file: tempfile.tap { write_csv_data })
+      end
+
+      def tempfile
+        @tempfile ||= Tempfile.new(filename)
+      end
+
+      def filename
+        @file.path.split('/').last
+      end
+
+      # TODO: Roo has a built-in .to_yaml transform. Consider using that over CSV
+      #       whenever a YAML processor is implemented
+      def write_csv_data
+        # arguments: filename = nil, separator = ',', sheet = default_sheet
+        @csv_data ||= raw_data.to_csv(tempfile, ';')
       end
     end
   end
