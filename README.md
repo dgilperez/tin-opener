@@ -1,4 +1,4 @@
-# tin-opener
+# tin_opener
 
 Opening Data, one Tin at a time.
 
