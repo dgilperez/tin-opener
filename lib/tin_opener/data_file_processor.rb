@@ -6,7 +6,9 @@ module TinOpener
     end
 
     def headers
-      @headers ||= rows.first
+      @headers ||= rows.first.transform_values do |value|
+          value.class.name
+        end
     end
 
     def rows

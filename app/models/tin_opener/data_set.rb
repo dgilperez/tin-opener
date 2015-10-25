@@ -4,7 +4,7 @@ module TinOpener
 
     attr_accessor :data_file, :processed_data_file
 
-    validates :name, presence: true, uniqueness: true
+    validates :name, presence: true, uniqueness: { scope: :headers }
     validates :headers, presence: true
 
     before_validation :process_data_file

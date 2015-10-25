@@ -5,15 +5,15 @@
 
 <h1><%= @data_set.name %></h1>
 
-<h2>Estructura</h2>
+<h2>Structure</h2>
 <p>
   <%= @data_set.headers.keys.join(', ') %>
 </p>
 
-<h2>Entradas</h2>
+<h2>Records</h2>
 
 <% if @records.present? %>
   <%= render @records %>
 <% else %>
-  <p>No hay entradas</p>
+  <p>No records added for this data set yet.</p>
 <% end %>

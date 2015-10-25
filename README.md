@@ -17,4 +17,9 @@ Add a mounting point to your `routes.rb`
 Run migrations:
 
     rake tin_opener:install:migrations
-    rake db:migrate 
+    rake db:migrate
+
+This gem provides the following models and routes:
+
+* `TinOpener::DataSet` is any type of data structure you declare in your data domain. It's defined by it's name and headers, which in turn is a hash of key name and data type pairs.
+* `TinOpener::Record` is a
