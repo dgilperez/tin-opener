@@ -6,7 +6,6 @@ require "csv"
 require "roo"
 require "roo-xls"
 require "activerecord-import"
-require 'pry-byebug' unless Rails.env.production?
 
 module TinOpener
 end
