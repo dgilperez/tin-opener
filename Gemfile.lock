@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tin_opener (0.0.2)
+    tin_opener (0.0.3)
       activerecord-import (~> 0.10)
       pg
       rails (~> 4.2.4)
