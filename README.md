@@ -30,14 +30,14 @@ This gem provides the following models:
 Data input format support:
 
 * CSV
-* XLS (basic)
+* XLS (basic format, one worksheet)
+* XLST (basic format, one worksheet)
 
 ## TODO
 
 Support for more data formats:
 
-* XLST
-* XLS (test different scenarios)
+* XLS - test different scenarios
 * XML
 * Custom Data Sources
 

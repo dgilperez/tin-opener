@@ -14,7 +14,7 @@ module TinOpener
       @file_type_processor ||= case mime_type
         when 'text/csv', 'text/comma-separated-values', 'text/plain'
           DataFileProcessors::CsvProcessor.new(file: @file)
-        when 'application/excel'
+        when 'application/excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
           DataFileProcessors::XlsProcessor.new(file: @file)
         else
           fail UnsupportedDataFileError

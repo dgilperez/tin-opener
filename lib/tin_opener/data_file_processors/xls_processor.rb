@@ -1,10 +1,7 @@
 module TinOpener
   module DataFileProcessors
+    # Handles both XLS and XLST formats. Actually, any format supported by *roo* gem.
     class XlsProcessor < TinOpener::DataFileProcessor
-      def initialize(args = {})
-        super
-      end
-
       delegate :headers, :rows, to: :csv_processor
 
       private
